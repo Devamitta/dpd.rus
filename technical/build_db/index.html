@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#building-the-db-from-scratch" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -1239,7 +1239,7 @@
   
   
   <span class="md-ellipsis">
-    Dhamma.gift website
+    Dhamma.gift
     
   </span>
   
@@ -1285,7 +1285,7 @@
   
   
   <span class="md-ellipsis">
-    Sutta Central Website
+    Sutta Central
     
   </span>
   
@@ -1807,7 +1807,7 @@
   
   
   <span class="md-ellipsis">
-    Pāḷi Notes
+    Язык Пали
     
   </span>
   
@@ -1859,7 +1859,7 @@
   
   
   <span class="md-ellipsis">
-    Документация для разработчиков
+    Для разработчиков
     
   </span>
   
@@ -1876,7 +1876,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_18">
             <span class="md-nav__icon md-icon"></span>
-            Документация для разработчиков
+            Для разработчиков
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1935,18 +1935,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#building-the-db-from-scratch" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Building the DB from scratch
+      Сборка базы данных с нуля
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-configuration" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional configuration
+      Дополнительная настройка
     </span>
   </a>
   
@@ -2085,18 +2085,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#building-the-db-from-scratch" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Building the DB from scratch
+      Сборка базы данных с нуля
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-configuration" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional configuration
+      Дополнительная настройка
     </span>
   </a>
   
@@ -2123,45 +2123,45 @@
 
   <h1>Построить БД с нуля</h1>
 
-<h2 id="building-the-db-from-scratch">Building the DB from scratch</h2>
-<p>(1) Download the repo</p>
+<h2 id="_1">Сборка базы данных с нуля</h2>
+<p>(1) Скачайте репозиторий:</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>https://github.com/sasanarakkha/dpd-db-sbs.git
 </span></code></pre></div>
-<p>(2) Navigate into the directory</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>dpd-db
+<p>(2) Перейдите в директорию проекта:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>dpd-db-sbs
 </span></code></pre></div>
-<p>(3) Download the submodules from Github</p>
+<p>(3) Загрузите подмодули из GitHub:</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>submodule<span class="w"> </span>init<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>submodule<span class="w"> </span>update
 </span></code></pre></div>
-<p>(4) Install <a href="https://nodejs.org/en/download" target="_blank">nodejs</a> for your operating system</p>
-<p>(5) Install <a href="https://go.dev/doc/install" target="_blank">go</a> for your operating system</p>
-<p>(6) Install <a href="https://astral.sh/uv/install" target="_blank">uv</a> for your operating system</p>
+<p>(4) Установите <a href="https://nodejs.org/en/download" target="_blank">Node.js</a> для вашей операционной системы.</p>
+<p>(5) Установите <a href="https://go.dev/doc/install" target="_blank">Go</a> для вашей операционной системы.</p>
+<p>(6) Установите <a href="https://astral.sh/uv/install" target="_blank">uv</a> для вашей операционной системы:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
 </span></code></pre></div>
-<p>(7) Install all the dependencies with uv</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>uv<span class="w"> </span>sync
+<p>(7) Установите все зависимости с помощью <code>uv</code>:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>uv<span class="w"> </span>sync
 </span></code></pre></div>
-<p>(8) Having at least 20 GB of RAM can be helpful. If you have less, consider <a href="https://www.reddit.com/r/linuxmint/comments/uhjyir/how_to_increase_swap_size/?rdt=34113" target="_blank">increasing the swap memory.</a>.</p>
-<p>(9) Run this once to initialize the project</p>
+<p>(8) Наличие как минимум 20 ГБ оперативной памяти будет полезно. Если у вас меньше, рассмотрите возможность <a href="https://www.reddit.com/r/linuxmint/comments/uhjyir/how_to_increase_swap_size/?rdt=34113" target="_blank">увеличения объёма swap-памяти.</a></p>
+<p>(9) Один раз выполните инициализацию проекта:</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>uv<span class="w"> </span>run<span class="w"> </span>bash<span class="w"> </span>scripts/bash/initial_setup_run_once.sh
 </span></code></pre></div>
-<p>(10) Build the database, this can take up to an hour the first time.</p>
+<p>(10) Постройте базу данных — это может занять до часа при первом запуске:</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>uv<span class="w"> </span>run<span class="w"> </span>bash<span class="w"> </span>scripts/bash/initial_build_db.sh
 </span></code></pre></div>
-<p>That should create an SQLite database <code>dpd.db</code> in the root folder which can be accessed with <a href="https://sqlitebrowser.org/" target="_blank">DB Browser</a>, <a href="https://dbeaver.io/" target="_blank">DBeaver</a>, through <a href="https://www.sqlalchemy.org/" target="_blank">SQLAlechmy</a> or your preferred method.</p>
-<p>For a quick tutorial on how to access any information in the db with SQLAlchemy, see <a href="../use_db/">Using the db</a></p>
+<p>В результате будет создан файл базы данных SQLite <code>dpd.db</code> в корневой папке проекта. Его можно открыть с помощью <a href="https://sqlitebrowser.org/" target="_blank">DB Browser</a>, <a href="https://dbeaver.io/" target="_blank">DBeaver</a>, через <a href="https://www.sqlalchemy.org/" target="_blank">SQLAlchemy</a> или другим удобным способом.</p>
+<p>Краткое руководство по работе с этой базой данных через SQLAlchemy см. в разделе <a href="../use_db/">использование базы данных</a></p>
 <hr />
-<h2 id="additional-configuration">Additional configuration</h2>
-<p>There are some additional dependencies in different parts of the project that may need to be installed depending on your use case.</p>
+<h2 id="_2">Дополнительная настройка</h2>
+<p>В проекте есть дополнительные модули, которые могут потребовать установки в зависимости от того, чем вы планируете пользоваться:</p>
 <ol>
 <li>
-<p>The <strong>GoldenDict</strong> exporter requires <a href="https://linux-packages.com/ubuntu-24-04/package/dictzip" target="_blank">dictzip</a></p>
+<p><strong>Экспорт в GoldenDict</strong> требует установленной утилиты <a href="https://linux-packages.com/ubuntu-24-04/package/dictzip" target="_blank">dictzip</a></p>
 </li>
 <li>
-<p>Running the <strong>GUI</strong> requires <a href="https://www.pythonguis.com/installation/install-tkinter-linux/" target="_blank">tkinter</a></p>
+<p>Для запуска <strong>графического интерфейса</strong> требуется установленный <a href="https://www.pythonguis.com/installation/install-tkinter-linux/" target="_blank">tkinter</a></p>
 </li>
 <li>
-<p>The <strong>database tests</strong> may require <a href="https://pyperclip.readthedocs.io/en/latest/index.html#not-implemented-error" target="_blank">pyperclip dependencies</a>.</p>
+<p>Для запуска <strong>тестов базы данных</strong> могут понадобиться зависимости для <a href="https://pyperclip.readthedocs.io/en/latest/index.html#not-implemented-error" target="_blank">pyperclip</a></p>
 </li>
 </ol>
 
@@ -2193,7 +2193,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Developer Docs">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Для разработчиков">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2203,7 +2203,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Developer Docs
+                Для разработчиков
               </div>
             </div>
           </a>
