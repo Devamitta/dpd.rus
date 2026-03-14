@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -618,6 +618,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -758,6 +762,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../install/apple_dict/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apple Dictionary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../install/ios/" class="md-nav__link">
         
   
@@ -878,6 +910,34 @@
     
   
     ChromeBook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/browser_extension/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chrome & Firefox Extension
   
 
     
@@ -2433,6 +2493,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#idiosyncratic-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idiosyncratic Symbols
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#database-relationships" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2540,6 +2611,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#idiosyncratic-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idiosyncratic Symbols
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#database-relationships" class="md-nav__link">
@@ -2716,7 +2798,7 @@
 <p><strong><code>non_ia</code></strong> <code>[str]</code> what non Indo-Aryan word is the headword derived from?</p>
 </li>
 <li>
-<p><strong><code>sanskrit</code></strong> <code>[str]</code> what is the closest Sanskrit cognate in Monier-Williams or Edgerton?</p>
+<p><strong><code>sanskrit</code></strong> <code>[str]</code> what is the closest Sanskrit cognate in Monier-Williams or Edgerton? The prefix and root found in MW is in square brackets [kṛ]</p>
 </li>
 <li>
 <p><em><code>sanskrit_clean</code></em> <code>[str]</code> what is the Sanskrit stripped of all content in <code>[square brackets]</code>?</p>
@@ -2967,6 +3049,14 @@
 <li>
 <p><em><code>__repr__</code></em> <code>[str]</code> quick overview of headword data</p>
 </li>
+</ul>
+<h2 id="idiosyncratic-symbols">Idiosyncratic Symbols</h2>
+<p>A few fields contain symbols that might not be immediately apparent.</p>
+<ul>
+<li><code>sanskrit</code>: <code>[square brackets]</code> contain the prefix and root found in Monier Williams, e.g. <code>[anukṛ]</code></li>
+<li><code>source_1</code>: <code>-</code> means no real example can be found. Often used for sutta names and other structural aspects of Pāḷi texts. The entry is considered complete even without an example. </li>
+<li><code>stem</code>: <code>!</code> means no actual stem. The word is derived entirely from the <code>pattern</code> column.</li>
+<li><code>stem</code>: <code>*</code> means do not generate a full list of inflections for the <code>inflection</code> column. The word is often an irregular form, and only the exact spelling of the <code>lemma_clean</code> needs to be recognized.</li>
 </ul>
 <h2 id="database-relationships">Database Relationships</h2>
 <p>The <code>DpdHeadword</code> class has direct access to other tables in the database through relationships.</p>
